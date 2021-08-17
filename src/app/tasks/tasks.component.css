@@ -1,0 +1,29 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex input {
+  margin: 10px;
+}
+
+.flex button {
+  margin: 10px;
+}
+
+tr th,
+td {
+  border: 1px solid lightgrey;
+  padding: 10px;
+}
+
+form {
+  width: 100%;
+}
+
+.checkmark {
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  margin: 10px;
+}

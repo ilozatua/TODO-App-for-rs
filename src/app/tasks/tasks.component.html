@@ -1,0 +1,40 @@
+<form #form="ngForm" class="container">
+  <div class="flex form-group">
+    <input
+      #task
+      type="text"
+      placeholder="enter task here"
+      class="form-control"
+      name="task"
+      id="task"
+    />
+    <button class="btn btn-primary" (click)="add(task.value)">Add</button>
+  </div>
+
+  <table class="form-control">
+    <thead>
+      <tr>
+        <th class="col-12">Description</th>
+        <th class="col-3">Done</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let desc of description">
+        <td>{{ desc }}</td>
+        <td>
+          <input
+            #saveCheckBox
+            id="saveCheckBox"
+            type="checkbox"
+            [checked]="savecheckedBox"
+            (change)="oncheckboxChanged(saveCheckBox.checked)"
+          />
+        </td>
+      </tr>
+    </tbody>
+    <div class="mt-3">
+      <p>{{ completed }} complete items</p>
+      <p>{{ incomplete }} incomplete items</p>
+    </div>
+  </table>
+</form>

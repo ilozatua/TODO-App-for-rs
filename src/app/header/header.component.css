@@ -1,0 +1,11 @@
+header {
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+header h1 {
+  color: white;
+}
